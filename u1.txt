@@ -1,0 +1,145 @@
+Elementos de una red convergente 
+
+La colaboracion es un requisito
+
+	-Para admitir la colaboracion, las deres emplean soluciones convergentes.
+	-Serivios de datos como los sistemas de voz, los telefonos IP, los gateways de voz, la compatibilidad con video y las videoconferencias. 
+	-EL control de llamadas, la mensajeria de voz, la movilidad y el contestador automatico tambien son funciones comunes
+
+Ventajas de las redes convergentes incluyen lo siguiente: 
+	VArios tipos de trafico y una sola red para administrar
+	Ahorros sutanciales,  y la administracion de redes de voz, video y datos independientes 
+	INtegra la administracion de TI
+REdes comutadas sin fronteras
+	Cisco borderless Network es una arquitectura de red que permite que las organizaciones se conecten 
+
+- Jerarquia en las redes conmutadas sin fronteras-
+  Las pautas de diseño de las redes conmutadas sin fronteras se basan en los siguientes principios
+	Jerarquico
+	Modularidad
+	Capacidad de recuperacion 
+	Flexibilidad 
+
+
+      CAPAS 	INTERNET 
+Capa de nucle.......COnexion de toda la red, BackBone, Aisla fallas.
+Capa de distribucion
+Capa de acceso
+
+
+	FACETOR DE FORMA
+  MODULARES 
+	Flexibilidad 
+	CUanto mas grande mas modulos pueden aceptar
+  APILABLE
+	Se apilan los switch en forma de cadena margarita se pueden interconectar hasta 9 switches
+
+	SWITCH COMO CONCEPTO GENERAL 
+  -Un switch toma una decision sobre la base del puerto de entrada y destino. 
+  -Los Switches LAN mantienen una tabla que usan para determinar como reenviar el trafico a traves del switch 
+  -Los SWitches LAN Cisco reenvian traas de Ethernet segun la direccion MAC de destino de las tramas
+
+ Tablas MAC    *router ip, switch mac* 
+
+     Completado dinamico de la tabla de direcciones MAC de un Switch 
+-crea una tabla denominada "Tabla de direcciones MAC" (CAM) 
+-El dispositivo <-> puerto de asignacion se almacena en la tabla CAM 
+-CAM es un tipo de memoria especial que se usa en las apliaciones 
+
+       SWITCH por alamecnamiento y envio 
+	-El Switching por almacenamiento y envio permite que el switch haga lo siguie 
+	-Verificar si hay errores (MEdiante la verificacion de FCS) 
+	-Hacer un reenvio mas lento 
+
+	Switching por metodo corte 
+	es mas rapido  
+ 
+  Dominios de colisiociones
+Los puertos de Switch crean dominios de colision separados (Conmutacion)
+
+
+UNIDAD 2  02/02/17 
+ 
+ROM de arranque 
+VRAM 
+MEMORIA FLASH DE 2 O 4 MB -------------> SDRAM DIMM 128 MB  (expandible 348) 
+
+
+Recuperacion tras un bloqeuo del sistema
+
+ El cargador de arranque tambien se puede utilizar para administrar el switch si el IOS no se puede cargar 
+ * Se puede acceder al cargador de arranque mediante una conexion de consola con los siguientes pasos: 
+	 1 Conecte una computadora al puerto de consola del switch con un cable de consola. Desconecte el cable de alimentacion del switch
+	 2 Vuelva a conecar el cabl de alimentacion al switch y mantenga presionado el boton Mode 
+	 3 EL LED del sistema emite brevemente una luz color ambar y despues verde solido suelte el boton Mode. 
+    Aparece la peticion de entrada swtich: del cargador de arranque en el software de emulacion de terminal en la computadora
+
+INDICADORES LED DE LOS SWITCHES
+ 
+
+COnfig. switch 
+CLI
+--------------------------------------------------------------------------------------------------------|
+switch > enable <-                                                                                      |
+		Config T <-                                                                                     |
+		interface vlan 1 <-                                                                             |
+		IP add  172.17.99.11 255.255.0.0 <-                                                             |
+		no shut <-                                                                                      |
+		exit <-                                                                                         |
+		hostname S1 <-                                                                                  |
+		ip default-gateway	172.17.99.1                                                                 |
+		no shut----------------------------------------------------------------------Configurar switch  | 
+_______________________________________________________________________________________________________|
+
+_____________________________________________________________________________________________________
+S1(config)# enable secret class -------------------------------------------privilegiado              |
+		line console                                                                                 |
+		Password cisco                                                                               |
+		exit																						 |							   |
+------------------------------------------------------------- pone contraseña en las diferentes capas|
+_____________________________________________________________________________________________________|
+____________________________________________________________________________________
+S1(config) # line VTY o 2 ---------------------queden activadas esas lineas          |
+ 		password cisco                                                               |
+		login local                                                                  |
+		exit																		 |
+--------------------------------------------------------------contraseña para telnet |
+_____________________________________________________________________________________|
+-----------------------------------------------------------|
+		service password-encryption                        |
+		copy running-config startup-config	               |Encripta las contraseñas
+-----------------------------------------------------------|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
